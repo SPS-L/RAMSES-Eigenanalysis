@@ -1,0 +1,20 @@
+FNOM 50 ;
+
+#Left thevenin 
+
+BUS LEFT 320  0  0  0  0 ;
+LFRESV LEFT 1.000000 0. ;
+INJEC THEVEQ LEFT LEFT  0. 0. 600 0.  15000. ;
+
+#Left thevenin 
+
+BUS RIGHT 320  0  0  0  0 ;
+LFRESV RIGHT 1.000000 0. ;
+INJEC THEVEQ RIGHT RIGHT  0. 0. -587.5 0.  15000. ;
+
+#  									                FP1    FQ1     P1      Q1     FP2     FQ2      P2     Q2    R_1     L_1  	
+ TWOP twop_DCL_WCL	LINK   LEFT  RIGHT   A  0.0    0.0   -600     0.0     0.0     0.0     587.5     0.0   0.01   0.15
+#Hdc_1   Snom_1    Kpp_1    Kip_1    Kwi_1   Kpq_1    Kiq_1    Kpw_1      Kiw_1     betaV_1    R_2     L_2   Hdc_2
+0.0102    1100       0       39       3.1      5       60      0.6366     31.83      0.12     0.01    0.15   0.0102
+#Snom_2   Kpd_2   Kid_2     Kpq_2    Kiq_2   Kpw_2    Kiw_2    alpha2_2     beta2_2     Pnom      R_dc      Vdc0 
+  1100    1200    116.6      1200    116.6   0.6366   31.83      -1            0        1000     0.0161     1.01;
