@@ -41,9 +41,9 @@ global sigma analysis numEig
 
 %% Check and correct arguments
 if nargin < 3
-    error('You need to give at least 3 arguments. Write 'help ssa'.');
+    error('You need to give at least 3 arguments. Write ''help ssa''.');
 elseif nargin > 7
-    error('ssa requires at most 7 arguments. Write 'help ssa'.');
+    error('ssa requires at most 7 arguments. Write ''help ssa''.');
 end
 
 
