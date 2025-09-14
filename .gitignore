@@ -1,2 +1,3 @@
 example/eigs.fig
 example/modal_reduction.mat
+example/*.trace
