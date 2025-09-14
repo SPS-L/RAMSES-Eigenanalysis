@@ -2,23 +2,23 @@
 %  
 %  Copyright 2024 Sustainable Power Systems Lab (SPSL)
 %  
-%  Licensed under the Apache License, Version 2.0 (the "License");
+%  Licensed under the Apache License, Version 2.0 (the 'License');
 %  you may not use this file except in compliance with the License.
 %  You may obtain a copy of the License at
 %  
 %      http://www.apache.org/licenses/LICENSE-2.0
 %  
 %  Unless required by applicable law or agreed to in writing, software
-%  distributed under the License is distributed on an "AS IS" BASIS,
+%  distributed under the License is distributed on an 'AS IS' BASIS,
 %  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 %  See the License for the specific language governing permissions and
 %  limitations under the License.
 %
 %  Usage:
-%  ssa("jac_val.dat","jac_eqs.dat","jac_var.dat","jac_struc.dat",real_limit,damp_ratio,method)
-%  ssa("jac_val.dat","jac_eqs.dat","jac_var.dat","jac_struc.dat",real_limit,damp_ratio,[])
-%  ssa("jac_val.dat","jac_eqs.dat","jac_var.dat","jac_struc.dat",real_limit,[],[])
-%  ssa("jac_val.dat","jac_eqs.dat","jac_var.dat","jac_struc.dat",[],[],[])
+%  ssa('jac_val.dat','jac_eqs.dat','jac_var.dat','jac_struc.dat',real_limit,damp_ratio,method)
+%  ssa('jac_val.dat','jac_eqs.dat','jac_var.dat','jac_struc.dat',real_limit,damp_ratio,[])
+%  ssa('jac_val.dat','jac_eqs.dat','jac_var.dat','jac_struc.dat',real_limit,[],[])
+%  ssa('jac_val.dat','jac_eqs.dat','jac_var.dat','jac_struc.dat',[],[],[])
 %
 %  jac_val : has the values of the matrix in coordinate format
 %  jac_eqs : has the description of the equations, mainly if they are
@@ -41,9 +41,9 @@ global sigma analysis numEig
 
 %% Check and correct arguments
 if nargin < 3
-    error('You need to give at least 3 arguments. Write "help ssa".');
+    error('You need to give at least 3 arguments. Write 'help ssa'.');
 elseif nargin > 7
-    error('ssa requires at most 7 arguments. Write "help ssa".');
+    error('ssa requires at most 7 arguments. Write 'help ssa'.');
 end
 
 
@@ -53,7 +53,7 @@ else
     analysis = method ; 
 end
 if ~(strcmp(analysis,'QZ') || strcmp(analysis,'ARP'))
-    error("Method should be 'QZ' or 'ARP'.");
+    error('Method should be ''QZ'' or ''ARP''.');
 end
 
 if ~exist('jac_struc','var') || isempty(jac_struc)

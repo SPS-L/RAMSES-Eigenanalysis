@@ -55,10 +55,10 @@ The main function `ssa()` performs the eigenanalysis:
 
 ```matlab
 % Basic usage with default settings
-ssa("jac_val.dat", "jac_eqs.dat", "jac_var.dat", "jac_struc.dat")
+ssa('jac_val.dat', 'jac_eqs.dat', 'jac_var.dat', 'jac_struc.dat')
 
 % With custom parameters
-ssa("jac_val.dat", "jac_eqs.dat", "jac_var.dat", "jac_struc.dat", real_limit, damp_ratio, method)
+ssa('jac_val.dat', 'jac_eqs.dat', 'jac_var.dat', 'jac_struc.dat', real_limit, damp_ratio, method)
 ```
 
 ### Function Parameters
@@ -83,7 +83,7 @@ ssa("jac_val.dat", "jac_eqs.dat", "jac_var.dat", "jac_struc.dat", real_limit, da
 
 2. **Run Eigenanalysis**: Execute in MATLAB
    ```matlab
-   ssa("jac_val.dat", "jac_eqs.dat", "jac_var.dat", "jac_struc.dat")
+   ssa('jac_val.dat', 'jac_eqs.dat', 'jac_var.dat', 'jac_struc.dat')
    ```
 
 3. **Interactive Analysis**: Use the interactive menu to explore results:
